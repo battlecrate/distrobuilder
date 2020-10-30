@@ -38,6 +38,8 @@ func Get(generator string) Generator {
 		return LXDAgentGenerator{}
 	case "fstab":
 		return FstabGenerator{}
+	case "copy":
+		return CopyGenerator{}
 	}
 
 	return nil
