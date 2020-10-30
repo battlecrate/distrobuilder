@@ -12,7 +12,7 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/antchfx/htmlquery.v1"
 
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // PlamoLinuxHTTP represents the Plamo Linux downloader.

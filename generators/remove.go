@@ -4,8 +4,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/lxc/distrobuilder/image"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/image"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // RemoveGenerator represents the Remove generator.

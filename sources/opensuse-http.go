@@ -18,7 +18,7 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/antchfx/htmlquery.v1"
 
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // OpenSUSEHTTP represents the OpenSUSE HTTP downloader.

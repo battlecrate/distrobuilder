@@ -8,8 +8,8 @@ import (
 	"github.com/lxc/lxd/shared/api"
 	"github.com/pkg/errors"
 
-	"github.com/lxc/distrobuilder/image"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/image"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 var upstartTTYJob = `start on starting tty1 or starting tty2 or starting tty3 or starting tty4 or starting tty5 or starting tty6

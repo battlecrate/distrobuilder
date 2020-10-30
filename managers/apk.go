@@ -3,7 +3,7 @@ package managers
 import (
 	"os"
 
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // NewApk creates a new Manager instance.

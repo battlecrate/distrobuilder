@@ -12,7 +12,7 @@ import (
 	lxd "github.com/lxc/lxd/shared"
 	"gopkg.in/antchfx/htmlquery.v1"
 
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // FuntooHTTP represents the Funtoo downloader.

@@ -13,7 +13,7 @@ import (
 
 	lxd "github.com/lxc/lxd/shared"
 
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // GentooHTTP represents the Alpine Linux downloader.

@@ -3,7 +3,7 @@ package managers
 import (
 	"fmt"
 
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 func enmanRepoCaller(repo shared.DefinitionPackagesRepository) error {

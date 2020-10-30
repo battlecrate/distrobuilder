@@ -1,6 +1,6 @@
 package sources
 
-import "github.com/lxc/distrobuilder/shared"
+import "github.com/battlecrate/distrobuilder/shared"
 
 // A Downloader represents a source downloader.
 type Downloader interface {

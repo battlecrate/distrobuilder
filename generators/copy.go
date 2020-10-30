@@ -2,19 +2,19 @@ package generators
 
 import (
 	"fmt"
+	"github.com/battlecrate/distrobuilder/shared"
 	"io"
 	"os"
 	"path/filepath"
 
-	"github.com/lxc/distrobuilder/image"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/image"
 )
 
 // CopyGenerator represents the Copy generator.
 type CopyGenerator struct{}
 
 // RunLXC copies a file to the container.
-func (g CopyGenerator) RunLXC(cacheDir, sourceDir string, img *image.LXCImage,
+func (g CopyGenerator) RunLXC(cacheDir string, sourceDir string, img *image.LXCImage,
 	target shared.DefinitionTargetLXC, defFile shared.DefinitionFile) error {
 	// no template support for LXC, ignoring generator
 	return nil
@@ -28,7 +28,7 @@ func (g CopyGenerator) RunLXD(cacheDir, sourceDir string, img *image.LXDImage,
 
 // Run copies a file to the container.
 func (g CopyGenerator) Run(cacheDir, sourceDir string, defFile shared.DefinitionFile) error {
-	in, err := os.Open(defFile.Path)
+	in, err := os.Open(defFile.Source)
 	if err != nil {
 		if os.IsNotExist(err) {
 			err = fmt.Errorf("File '%s' doesn't exist", defFile.Path)
@@ -37,38 +37,29 @@ func (g CopyGenerator) Run(cacheDir, sourceDir string, defFile shared.Definition
 	}
 	defer in.Close()
 
-	var dest string = filepath.Join(sourceDir, defFile.Path)
+	// Calculate the destination path by combining the "rootfs" path and the destination file
+	var path = filepath.Join(sourceDir, defFile.Path)
 
-	// Let's make sure that we can create "the file"
-	dir := filepath.Dir(dest)
-	_, err = os.Stat(dir)
-	if os.IsNotExist(err) {
-		err = os.MkdirAll(dir, os.ModePerm)
-	}
+	// Create any missing directory
+	err = os.MkdirAll(filepath.Dir(path), 0755)
 	if err != nil {
 		return err
 	}
 
-	out, err := os.Create(dest)
+	out, err := os.Create(path)
 	if err != nil {
 		return err
 	}
 	defer out.Close()
 
-	err = out.Chown(0, 0)
-	if err != nil {
-		return err
-	}
-
-	info, err := in.Stat()
-	if err != nil {
-		return err
-	}
-	err = out.Chmod(info.Mode())
-	if err != nil {
-		return err
-	}
-
+	// copy data onto the new file
 	_, err = io.Copy(out, in)
+
+	if err != nil {
+		return err
+	}
+
+	// update the file access permissions
+	err = updateFileAccess(out, defFile)
 	return err
 }

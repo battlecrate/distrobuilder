@@ -10,8 +10,8 @@ import (
 	lxd "github.com/lxc/lxd/shared"
 	"github.com/stretchr/testify/require"
 
-	"github.com/lxc/distrobuilder/image"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/image"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 func TestCloudInitGeneratorRunLXC(t *testing.T) {

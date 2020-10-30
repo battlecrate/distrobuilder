@@ -1,6 +1,6 @@
 package managers
 
-import "github.com/lxc/distrobuilder/shared"
+import "github.com/battlecrate/distrobuilder/shared"
 
 // ManagerFlags represents flags for all subcommands of a package manager.
 type ManagerFlags struct {

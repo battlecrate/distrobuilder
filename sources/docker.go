@@ -6,7 +6,7 @@ import (
 
 	dcapi "github.com/mudler/docker-companion/api"
 
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // DockerHTTP represents the Docker HTTP downloader.

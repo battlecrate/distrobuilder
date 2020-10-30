@@ -7,8 +7,8 @@ import (
 
 	"github.com/flosch/pongo2"
 
-	"github.com/lxc/distrobuilder/image"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/image"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // DumpGenerator represents the Remove generator.

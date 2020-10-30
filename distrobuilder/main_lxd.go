@@ -11,10 +11,10 @@ import (
 	"github.com/spf13/cobra"
 	"golang.org/x/sys/unix"
 
-	"github.com/lxc/distrobuilder/generators"
-	"github.com/lxc/distrobuilder/image"
-	"github.com/lxc/distrobuilder/managers"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/generators"
+	"github.com/battlecrate/distrobuilder/image"
+	"github.com/battlecrate/distrobuilder/managers"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 type cmdLXD struct {

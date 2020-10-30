@@ -67,10 +67,10 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
 
-	"github.com/lxc/distrobuilder/managers"
-	"github.com/lxc/distrobuilder/shared"
-	"github.com/lxc/distrobuilder/shared/version"
-	"github.com/lxc/distrobuilder/sources"
+	"github.com/battlecrate/distrobuilder/managers"
+	"github.com/battlecrate/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/shared/version"
+	"github.com/battlecrate/distrobuilder/sources"
 )
 
 type cmdGlobal struct {

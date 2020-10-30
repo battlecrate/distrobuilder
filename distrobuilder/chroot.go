@@ -9,8 +9,8 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/sys/unix"
 
-	"github.com/lxc/distrobuilder/managers"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/managers"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 func manageRepositories(def *shared.Definition, manager *managers.Manager, imageTarget shared.ImageTarget) error {

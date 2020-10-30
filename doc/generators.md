@@ -21,6 +21,7 @@ files:
       name: <string>
       path: <string>
       content: <string>
+      source: <string>
       template:
           properties: <map>
           when: <array>
@@ -93,6 +94,10 @@ If `pongo` is true, the content will be processed using pongo2, and the context 
 See  [targets](targets.md).
 
 See [LXD image format](https://lxd.readthedocs.io/en/latest/image-handling/#image-format) for more.
+
+## copy
+
+The generator copies a file set in `source` to the container at `path`. All file specific properties such as `mode`, `gid` and `uid` are supported.
 
 ## upstart_tty
 

@@ -3,8 +3,8 @@ package generators
 import (
 	"errors"
 
-	"github.com/lxc/distrobuilder/image"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/image"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // ErrNotSupported returns a "Not supported" error

@@ -12,8 +12,8 @@ import (
 	"github.com/lxc/lxd/shared/api"
 	"github.com/pkg/errors"
 
-	"github.com/lxc/distrobuilder/image"
-	"github.com/lxc/distrobuilder/shared"
+	"github.com/battlecrate/distrobuilder/image"
+	"github.com/battlecrate/distrobuilder/shared"
 )
 
 // CloudInitGenerator represents the cloud-init generator.
