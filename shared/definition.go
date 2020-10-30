@@ -400,6 +400,7 @@ func (d *Definition) Validate() error {
 		"cloud-init",
 		"lxd-agent",
 		"fstab",
+		"copy",
 	}
 
 	for _, file := range d.Files {
